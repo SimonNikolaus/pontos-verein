@@ -18,4 +18,4 @@ Disallow: /
 User-agent: ClaudeBot
 Disallow: /
 
-Sitemap: https://www.pontos-verein.example/sitemap.xml
+Sitemap: https://simonnikolaus.github.io/pontos-verein/sitemap.xml

@@ -52,7 +52,7 @@ python3 -m http.server 8000
 
 ## Vor Veröffentlichung ersetzen
 
-1. Domain `https://www.pontos-verein.example/` in allen `<link rel="canonical">`,
+1. Bei Umzug auf eine eigene Domain: Adresse in allen `<link rel="canonical">`,
    `og:url`, JSON-LD, `sitemap.xml` und `robots.txt`.
 2. Vereinsname, Adresse, Kontakt, Beitragshöhe, Vorstand, Impressumsangaben.
 3. Platzhalter-Jahreszahlen in `vereinsgeschichte.html` durch die echte Chronik ersetzen.
