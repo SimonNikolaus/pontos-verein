@@ -1,0 +1,21 @@
+# Suchmaschinen und KI-Suchbots ausdrücklich erlaubt
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Trainings-Crawler bewusst ausgeschlossen (bei Bedarf Zeile entfernen)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+Sitemap: https://www.pontos-verein.example/sitemap.xml

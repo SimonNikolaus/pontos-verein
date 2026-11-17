@@ -1,0 +1,319 @@
+/* ==========================================================================
+   Neubrutalismus-Layer für daisyUI 5 + Tailwind (CDN-Variante)
+   Muss NACH dem daisyUI-Stylesheet eingebunden werden.
+   ========================================================================== */
+
+:root {
+  --ink: #111111;
+  --paper: #f4efe3;
+  --paper-2: #e9e0cc;
+  --yellow: #ffd400;
+  --blue: #2b5fd9;
+  --red: #e6392f;
+
+  --font-display: "Archivo Black", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+  --shadow-lg: 10px 10px 0 var(--ink);
+
+  /* daisyUI-Theme-Tokens überschreiben */
+  --color-base-100: var(--paper);
+  --color-base-200: var(--paper-2);
+  --color-base-300: #d8cdb2;
+  --color-base-content: var(--ink);
+  --color-primary: var(--yellow);
+  --color-primary-content: #111111;
+  --color-secondary: var(--blue);
+  --color-secondary-content: #ffffff;
+  --color-accent: var(--red);
+  --color-accent-content: #ffffff;
+  --color-neutral: var(--ink);
+  --color-neutral-content: var(--paper);
+  --color-info: var(--blue);
+  --color-info-content: #ffffff;
+  --color-success: #1a7f37;
+  --color-success-content: #ffffff;
+  --color-warning: var(--yellow);
+  --color-warning-content: #111111;
+  --color-error: var(--red);
+  --color-error-content: #ffffff;
+  --radius-box: 0rem;
+  --radius-field: 0rem;
+  --radius-selector: 0rem;
+  --border: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2ede1;
+    --paper: #141419;
+    --paper-2: #1d1d24;
+    --blue: #8aa8ff;
+    --red: #ff7a6b;
+    --color-base-300: #2a2a33;
+    --color-secondary: var(--blue);
+    --color-secondary-content: #101014;
+    --color-accent: var(--red);
+    --color-accent-content: #101014;
+    --color-neutral: var(--ink);
+    --color-neutral-content: #141419;
+  }
+}
+
+/* ---------- Basis ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+h1, h2, h3, .headline {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--yellow);
+  color: #111111;
+}
+
+/* ---------- Bausteine ---------- */
+
+.brutal {
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.brutal-sm {
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.brutal-lg {
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-lg);
+}
+
+.brutal-hover {
+  transition: translate 0.15s steps(2, end), box-shadow 0.15s steps(2, end);
+}
+
+.brutal-hover:hover,
+.brutal-hover:focus-visible {
+  translate: -2px -2px;
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.brutal-hover:active {
+  translate: 2px 2px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.bg-yellow { background-color: var(--yellow); }
+.bg-blue   { background-color: var(--blue); }
+.bg-red    { background-color: var(--red); }
+.bg-paper-2 { background-color: var(--paper-2); }
+
+.sticker-l { rotate: -2deg; }
+.sticker-r { rotate: 2deg; }
+
+.mark {
+  background: var(--yellow);
+  color: #111111;
+  padding-inline: 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.logo-block {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #111111;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  inset-inline-start: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111111;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Laufband */
+.marquee {
+  overflow: hidden;
+  border-block: 3px solid var(--ink);
+  background: var(--yellow);
+  color: #111111;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  padding-block: 0.4rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: marquee 24s linear infinite;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* Mäander-Trenner */
+.meander {
+  height: 22px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 40 22" fill="none" stroke="%23111111" stroke-width="3"><path d="M0 20 H8 V2 H24 V20 H16 V10 H32 V20 H40"/></svg>');
+  background-repeat: repeat-x;
+}
+
+/* Zeitleiste */
+.timeline-brutal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-brutal li {
+  position: relative;
+  margin-block-end: 1.5rem;
+  padding-inline-start: 2.5rem;
+  border-inline-start: 6px solid var(--ink);
+  padding-block-end: 0.25rem;
+}
+
+.timeline-brutal li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -14px;
+  top: 0.35rem;
+  width: 16px;
+  height: 16px;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+}
+
+.timeline-brutal time {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.1rem 0.5rem;
+  margin-block-end: 0.35rem;
+}
+
+/* daisyUI-Komponenten schärfen */
+.btn {
+  border: 3px solid var(--ink);
+  border-radius: 0;
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge {
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 0;
+}
+
+.input,
+.select,
+.textarea {
+  border: 3px solid var(--ink);
+  border-radius: 0;
+  background-color: var(--color-base-100);
+  color: var(--ink);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: color-mix(in srgb, var(--ink) 55%, transparent);
+}
+
+.table :where(th) {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+/* ---------- Bewegung reduzieren ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee__track {
+    animation: none;
+  }
+
+  .brutal-hover {
+    transition: none;
+  }
+}
+
+/* ---------- Dunkelmodus-Korrekturen ---------- */
+
+@media (prefers-color-scheme: dark) {
+  .meander {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 40 22" fill="none" stroke="%23f2ede1" stroke-width="3"><path d="M0 20 H8 V2 H24 V20 H16 V10 H32 V20 H40"/></svg>');
+  }
+
+  ::selection {
+    background: var(--yellow);
+    color: #111111;
+  }
+}
