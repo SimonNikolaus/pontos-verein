@@ -47,7 +47,7 @@ python3 -m http.server 8000
   Dunkelmodus folgt automatisch `prefers-color-scheme`.
 - **Harte Schatten**: Klassen `.brutal`, `.brutal-sm`, `.brutal-lg`; Hover-Effekt `.brutal-hover`.
 - **Keine Abrundungen**: daisyUI-Radien werden auf `0` gesetzt.
-- **Marquee-Laufband**, **Ionisch-Voluten-Trenner** (`.ionik`), **Zeitleiste** (`.timeline-brutal`),
+- **Marquee-Laufband**, **Ionisch-Voluten-Trenner** (`.ionik`), **Eierstab-Kyma** (`.kyma`), **Zeitleiste** (`.timeline-brutal`),
   **Textmarker** (`.mark`), **Sticker-Rotation** (`.sticker-l/r`).
 
 ## Vor Veröffentlichung ersetzen

@@ -217,6 +217,18 @@ h1, h2, h3, .headline {
   mask-size: auto 20px;
 }
 
+/* Eierstab / Ionische Kyma (Kapitell-Ornament) */
+.kyma {
+  height: 16px;
+  background-color: var(--ink);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="black"><ellipse cx="10" cy="9" rx="4" ry="5.5"/><path d="M0.5 14 L2 3.5 L3.5 14 Z"/><path d="M16.5 14 L18 3.5 L19.5 14 Z"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="black"><ellipse cx="10" cy="9" rx="4" ry="5.5"/><path d="M0.5 14 L2 3.5 L3.5 14 Z"/><path d="M16.5 14 L18 3.5 L19.5 14 Z"/></svg>');
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-size: auto 16px;
+  mask-size: auto 16px;
+}
+
 /* Zeitleiste */
 .timeline-brutal {
   list-style: none;
