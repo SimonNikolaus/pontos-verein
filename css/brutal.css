@@ -136,6 +136,22 @@ h1, h2, h3, .headline {
 .bg-red    { background-color: var(--red); }
 .bg-paper-2 { background-color: var(--paper-2); }
 
+/* Farbige Flächen: Inhalt immer dunkel, unabhängig vom Farbschema */
+.bg-yellow,
+.bg-blue,
+.bg-red {
+  color: #111111;
+}
+
+.bg-yellow .kyma,
+.bg-blue .kyma,
+.bg-red .kyma,
+.bg-yellow .ionik,
+.bg-blue .ionik,
+.bg-red .ionik {
+  background-color: #111111;
+}
+
 .sticker-l { rotate: -2deg; }
 .sticker-r { rotate: 2deg; }
 
